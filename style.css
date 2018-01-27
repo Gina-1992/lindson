@@ -1,10 +1,8 @@
 /**
- * Theme Name: Construction - Construction Company Template
- * Version: 1.0
- * Description: HTML5 Template for Construction Company and Building Services
- * Author: themesparagon
- * Author URI: https://themeforest.net/user/themesparagon
+ * Company: Lindson Building Services
+ * Author: Yours truley Gina Henderson
  */
+
 
 @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,400i,700,900|Montserrat:300,400,500,600,700&subset=latin");
 @import "assets/css/bootstrap.min.css";
@@ -275,6 +273,14 @@ h6 a:hover { text-decoration: none }
 .font-heading { font-family: "Montserrat", sans-serif; color: #383838; font-weight: 600; line-height: 1.5; }
 .font-heading-700 { font-family: "Montserrat", sans-serif; color: #383838; font-weight: 700; line-height: 1.5; }
 
+
+/* Background classes
+-------------------------------------------------------------- */
+
+.dark-background {background-color: #f9f9f9;}
+.light-background {background-color: #fff;}
+
+
 /* Extra classes
 -------------------------------------------------------------- */
 .display-none, .hidden { display: none !important; }
@@ -532,7 +538,7 @@ h6 a:hover { text-decoration: none }
 #top-bar.style-2 .top-bar-content .content.time:before { content: "\f017"; }
 #top-bar.style-2 .top-bar-content .content.email { padding-left: 40px; }
 
-#top-bar.style-2:after { background-color: #333743; border-width: 0 0 1px 0; border-style: solid; border-color: #515151; }
+#top-bar.style-2:after { background-color: #272e34; border-width: 0 0 1px 0; border-style: solid; border-color: #2f363f; }
 #top-bar.style-2, 
 #top-bar.style-2 a { color: #fff; }
 #top-bar.style-2 .top-bar-socials .icons a:hover { color: #f77015; }
@@ -540,7 +546,7 @@ h6 a:hover { text-decoration: none }
 /* Header 
 ------------------------------------*/
 /* Header Default */
-#site-header { position: relative; background-color:#2a2d37; }
+#site-header { position: relative; background-color:#20252a; }
 #site-header-inner { position: relative; padding-top: 20px; padding-bottom: 20px; height: 100%; -webkit-transition: all ease .238s; -moz-transition: all ease .238s; transition: all ease .238s; }
 #site-header #site-logo { float: left; }
 #site-header #main-nav { position: absolute; right: 0; top: 50%; z-index: 10; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); transform: translateY(-50%); }
@@ -631,7 +637,9 @@ body.header-style-2 #site-header #main-nav ul li.current-menu-item > a { color: 
 
 
 /* Header fixed */
-#site-header.is-fixed { position: fixed; left: 0; top: 0; width: 100%; z-index: 9989; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+#site-header.is-fixed { position: fixed; left: 0; top: 0; width: 100%; z-index: 9989; -webkit-box-shadow: -1px 5px 3px -4px rgba(0,0,0,0.34);
+    -moz-box-shadow: -1px 5px 3px -4px rgba(0,0,0,0.34);
+    box-shadow: -1px 5px 3px -4px rgba(0,0,0,0.34); }
 #site-header.is-fixed #site-header-inner { padding: 10px 0; }
 body.header-style-2 #site-header.is-fixed:after { opacity: 0.8; }
 
@@ -834,7 +842,7 @@ body.header-style-2 #site-header.is-fixed:after { opacity: 0.8; }
 
 /* Footer 
 ------------------------------------*/
-#footer { background-color: #1a1a1a; padding: 96px 0; }
+#footer { background-color: #20252a; padding: 96px 0; }
 #footer-widgets .widget .widget-title { margin-bottom: 25px; }
 #footer-widgets .widget .widget-title span { padding-bottom: 12px; }
 
@@ -858,7 +866,7 @@ body.header-style-2 #site-header.is-fixed:after { opacity: 0.8; }
 
 /* Bottom
 ------------------------------------*/
-#bottom { background-color: #141414; border-top: 1px solid #3d3d3d; }
+#bottom { background-color: #272e34; border-top: 1px solid #3d3d3d; }
 #bottom-bar-inner { padding: 22px 0; }
 
 /* Scroll Top Button
