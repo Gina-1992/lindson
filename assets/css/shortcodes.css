@@ -872,9 +872,9 @@
 
 /* Arrows Style 2: for dark background */
 .arrow-style-2 .owl-theme .owl-nav [class*="owl-"].disabled { background-color: rgba(255,255,255,0.2); color: #fff; }
-@media only screen and (max-width: 959px) {
+/*@media only screen and (max-width: 959px) {
 	.owl-theme .owl-nav { display: none !important; }
-}
+}*/
 
 /* Bullets Style 1 */
 .owl-theme .owl-dots { text-align: center; line-height: 10px; }
