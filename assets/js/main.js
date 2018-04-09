@@ -1,4 +1,5 @@
-;(function($) {
+;
+(function($) {
     'use strict'
 
     /**
@@ -10,14 +11,14 @@
      * ajaxContactForm
      * preLoader
      * scrollToTop
-    **/ 
+     **/
 
     var searchIcon = function() {
         $('.header-search-icon').on('click', function() {
             var searchForm = $(this).parent().find('.header-search-form'),
                 searchField = $(this).parent().find('.header-search-field');
 
-            searchForm.stop().fadeToggle(function () {
+            searchForm.stop().fadeToggle(function() {
                 searchField.focus();
             });
 
@@ -30,7 +31,7 @@
         var $logo = $('#site-logo img');
         var $logo_retina = $logo.data('retina');
 
-        if ( retina && $logo_retina ) {
+        if (retina && $logo_retina) {
             $logo.attr({
                 src: $logo.data('retina'),
                 width: $logo.data('width'),
@@ -45,28 +46,28 @@
             var mode = 'desktop';
             var $wrapMenu = $('#site-header-inner .wrap-inner');
 
-            if ( matchMedia( 'only screen and (max-width: 959px)' ).matches )
+            if (matchMedia('only screen and (max-width: 959px)').matches)
                 mode = 'mobile';
 
-            if ( mode != menuType ) {
+            if (mode != menuType) {
                 menuType = mode;
 
-                if ( mode == 'mobile' ) {
+                if (mode == 'mobile') {
                     $('#main-nav').attr('id', 'main-nav-mobi')
                         .appendTo('#site-header')
                         .hide()
-                            .find('li:has(ul)')
-                            .children('ul')
-                                .removeAttr('style')
-                                .hide()
-                                .before('<span class="arrow"></span>');
+                        .find('li:has(ul)')
+                        .children('ul')
+                        .removeAttr('style')
+                        .hide()
+                        .before('<span class="arrow"></span>');
                 } else {
                     $('#main-nav-mobi').attr('id', 'main-nav')
                         .removeAttr('style')
                         .prependTo($wrapMenu)
                         .find('.sub-menu')
-                            .removeAttr('style')
-                            .prev().remove();         
+                        .removeAttr('style')
+                        .prev().remove();
                     $('.mobile-button').removeClass('active');
                 }
             }
@@ -83,20 +84,20 @@
         })
     };
 
-     var headerFixed = function() {
-        if ( $('body').hasClass('header-fixed') ) {
+    var headerFixed = function() {
+        if ($('body').hasClass('header-fixed')) {
             var nav = $('#site-header');
 
 
-            if ( nav.length ) {
+            if (nav.length) {
                 var offsetTop = nav.offset().top,
                     headerHeight = nav.height(),
                     injectSpace = $('<div />', {
                         height: headerHeight
                     }).insertAfter(nav);
 
-                $(window).on('load scroll', function(){
-                    if ( $(window).scrollTop() > offsetTop ) {
+                $(window).on('load scroll', function() {
+                    if ($(window).scrollTop() > offsetTop) {
                         nav.addClass('is-fixed');
                         injectSpace.show();
                     } else {
@@ -105,17 +106,17 @@
                     }
                 })
             }
-        }     
+        }
     };
 
     var responsiveVideos = function() {
-        if ( $().fitVids ) {
+        if ($().fitVids) {
             $('.wprt-container').fitVids();
         }
     };
 
     var featuredMedia = function() {
-        if ( $().slick ) {
+        if ($().slick) {
             $('.blog-gallery').slick({
                 dots: false,
                 infinite: true,
@@ -125,55 +126,64 @@
             });
         }
     };
-        
-    var ajaxContactForm = function() {
-        if ( $().validate ) {        
-            $('.contact-form').each(function() {
-                $(this).validate({
-                    submitHandler: function( form ) {
-                        var
-                        $form = $(form),
-                        str = $form.serialize();
 
-                        $.ajax({
-                            type: "POST",
-                            url:  $form.attr('action'),
-                            data: str,
-                            beforeSend: function () {
-                                $form.find('.bwp-alert').remove();
-                            },
-                            success: function( msg ) {
-                                var result, cls;
 
-                                if ( msg == 'Success' ) {
-                                    result = 'Your message has been sent. Thank you!';
-                                    cls = 'success';
-                                } else {
-                                    result = 'Error sending email.';
-                                    cls = 'error';
-                                }
 
-                                $form.prepend(
-                                    $('<div />', {
-                                        'class': 'wprt-alert ' + cls,
-                                        'text' : result
-                                    }).append(
-                                        $('<a class="remove" href="#"><i class="fa fa-close"></i></a>')
-                                    )
-                                );
+    /////Validation
 
-                                $form.find(':input').not('.submit').val('');
-                            }
-                        });
-                    }
-                });
+    $("#contactform").validate({
+        rules: {
+            name: "required",
+            phone: {
+                required: true,
+                minlength: 10,
+                digits: true
+            },
+            /* email: {
+                 required: true,
+                 email: true
+             }*/
+        },
+        messages: {
+            name: "Please specify your name",
+            phone: {
+                required: "Please enter your phone number so that we can contact you",
+                digits: "Please only enter digits within this field",
+                minlength: "Please enter a minimum of 10 digits",
+            },
+            /*email: {
+                required: "We need your email address to contact you",
+                email: "Your email address must be in the format of name@domain.com"
+            }*/
+        }
+    });
+
+    //formspree
+
+    var $contactForm = $('#contactform');
+    $contactForm.submit(function(e) {
+        e.preventDefault();
+        if ($("#contactform").valid()) {
+            $.ajax({
+                url: 'https://formspree.io/lindsonbuildingservices@gmail.com',
+                method: 'POST',
+                data: $(this).serialize(),
+                dataType: 'json',
+                success: function(data) {
+                    $contactForm.append('<div class="alert alert--success">Message sent!</div>');
+                },
+                error: function(err) {
+                    $contactForm.find('.alert--loading').hide();
+                    $contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
+                }
             });
         }
-      
-    };
+    });
 
-    var preLoader  =  function() {
-        if ( $().animsition ) {
+
+
+    var preLoader = function() {
+        if ($().animsition) {
             $('.animsition').animsition({
                 inClass: 'fade-in',
                 outClass: 'fade-out',
@@ -189,18 +199,18 @@
                     '-webkit-animation-duration',
                     '-moz-animation-duration',
                     'animation-duration'
-                    ],
+                ],
                 overlay: false,
                 overlayClass: 'animsition-overlay-slide',
                 overlayParentElement: 'body',
-                transition: function(url){ window.location.href = url; }
+                transition: function(url) { window.location.href = url; }
             });
         }
     };
 
     var scrollToTop = function() {
         $(window).scroll(function() {
-            if ( $(this).scrollTop() > 800 ) {
+            if ($(this).scrollTop() > 800) {
                 $('#scroll-top').addClass('show');
             } else {
                 $('#scroll-top').removeClass('show');
@@ -208,8 +218,8 @@
         });
 
         $('#scroll-top').on('click', function() {
-            $('html, body').animate({ scrollTop: 0 }, 1000 , 'easeInOutExpo');
-        return false;
+            $('html, body').animate({ scrollTop: 0 }, 1000, 'easeInOutExpo');
+            return false;
         });
     };
 
@@ -220,8 +230,7 @@
         responsiveMenu();
         headerFixed();
         responsiveVideos();
-        featuredMedia(); 
-        ajaxContactForm();
+        featuredMedia();
         preLoader();
         scrollToTop();
     });

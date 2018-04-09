@@ -269,7 +269,7 @@
                                         </div>
                                         <!-- end contact row -->
 
-                                        <!-- Google map + contact form-->
+                                        <!-- Google map + contact form -->
                                         <div class="row">
 
                                             <div class="col-md-7">
@@ -282,39 +282,36 @@
 
                                                         <div class="wprt-spacer clearfix" data-desktop="39" data-mobi="39" data-smobi="39"></div>
 
-                                                        <form action="https://formspree.io/lindsonbuildingservices@gmail.com" method="POST" class="contact-form wpcf7-form">
+                                                        <form action="https://formspree.io/lindsonbuildingservices@gmail.com" method="post" class="contact-form wpcf7-form" id="contactform">
                                                             <div class="wprt-contact-form-2">
 
-
-
-                                                                <input type="email" name="email" placeholder="Your email">
-                                                                <textarea name="message" placeholder="Your message"></textarea>
-                                                                <button type="submit">Send</button>
-
-
-                                                                <!--form code
-
                                                                 <span class="wpcf7-form-control-wrap name">
-                                                            <input type="text" tabindex="1" id="name" name="name" value="" class="wpcf7-form-control" placeholder="Name *" required="">
-                                                        </span>
-
-                                                                <span class="wpcf7-form-control-wrap email">
-                                                            <input type="email" tabindex="2" id="email" name="email" value="" class="wpcf7-form-control" placeholder="E-mail *" required="">
-                                                        </span>
+                                                                <label for="name">Name</label>
+                                                                <input type="text" tabindex="1" id="name" name="name" value="" class="wpcf7-form-control" placeholder="Name *" required>
+                                                            </span>
 
                                                                 <span class="wpcf7-form-control-wrap phone">
-                                                            <input type="number" tabindex="2" id="phone" name="phone" value="" class="wpcf7-form-control" placeholder="Phone number">
-                                                        </span>
+                                                                    <label for="Phone">Phone Number</label>
+                                                                    <input type="number" tabindex="2" id="phone" name="phone" value="" class="wpcf7-form-control" placeholder="Phone number" required>
+                                                                </span>
+
+                                                                <span class="wpcf7-form-control-wrap email">
+                                                                <label for="Email">Email</label>
+                                                                <input type="email" tabindex="2" id="email" name="_replyto" value="" class="wpcf7-form-control" placeholder="E-mail *" >
+                                                            </span>
+
+
 
                                                                 <span class="wpcf7-form-control-wrap message">
-                                                            <textarea name="message" tabindex="5" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" placeholder="Message *" required=""></textarea>
-                                                        </span>
+                                                                <label for="message">Your message</label>
+                                                                <textarea name="message" id="message" tabindex="5" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" placeholder="Message *" required></textarea>
+                                                            </span>
 
                                                                 <div class="wrap-submit">
                                                                     <input type="submit" value="SUBMIT FORM" class="submit wpcf7-form-control wpcf7-submit" id="submit" name="submit">
                                                                 </div>
 
-                                                                <!-- end form code -->
+                                                                <input type="hidden" name="_next" value="//site.io/thanks.html" />
                                                             </div>
                                                         </form>
                                                     </div>
@@ -480,7 +477,7 @@
     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/js/plugins.js"></script>
-    <script type="text/javascript" src="assets/js/validate.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
     <script type="text/javascript" src="assets/js/shortcodes.js"></script>
 
     <!-- Google Map -->
