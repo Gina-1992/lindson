@@ -8,7 +8,6 @@
      * responsiveMenu
      * responsiveVideos
      * featuredMedia
-     * ajaxContactForm
      * preLoader
      * scrollToTop
      **/
@@ -131,7 +130,7 @@
 
     /////Validation
 
-    $("#contactform").validate({
+    $("form").validate({
         rules: {
             name: "required",
             phone: {
@@ -160,17 +159,20 @@
 
     //formspree
 
-    var $contactForm = $('#contactform');
+    var $contactForm = $('form');
     $contactForm.submit(function(e) {
         e.preventDefault();
-        if ($("#contactform").valid()) {
+        if ($(contactForm).valid()) {
             $.ajax({
                 url: 'https://formspree.io/lindsonbuildingservices@gmail.com',
                 method: 'POST',
                 data: $(this).serialize(),
                 dataType: 'json',
                 success: function(data) {
-                    $contactForm.append('<div class="alert alert--success">Message sent!</div>');
+                    $('#successModal').modal('show');
+                    setTimeout(function() {
+                        $('#successModal').modal('hide');
+                    }, 3000);
                 },
                 error: function(err) {
                     $contactForm.find('.alert--loading').hide();

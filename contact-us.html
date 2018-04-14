@@ -297,13 +297,46 @@
 
                                                                 <span class="wpcf7-form-control-wrap email">
                                                                 <label for="Email">Email</label>
-                                                                <input type="email" tabindex="2" id="email" name="_replyto" value="" class="wpcf7-form-control" placeholder="E-mail *" >
+                                                                <input type="email" tabindex="3" id="email" name="_replyto" value="" class="wpcf7-form-control" placeholder="E-mail *" >
                                                             </span>
+
+                                                                <div class="form-group form-dd select-field">
+                                                                    <label for="enquirycat" aria-label="Enquiry category">What is your enquiry regarding?</label>
+                                                                    <select name="enquiryrcat" class="form-control" id="enquirycat" aria-invalid="false">
+                                                                            <option value="select contact reason">What is your enquiry regarding?</option>
+                                                                            <option value="General enquiry">General enquiry</option>
+                                                                            <option value="Plumbing">Plumbing</option>
+                                                                            <option value="Heating">Heating</option>
+                                                                            <option value="Electrical">Electrical</option>
+                                                                            <option value="Building">Building</option>
+                                                                            <option value="Repairs">Repairs</option>
+                                                                            <option value="Installations">Installation</option>
+                                                                            <option value="Area coverage">Area Coverage</option>
+                                                                            <option value="Pricing details">Pricing Details</option> 
+                                                                    </select>
+
+                                                                    <!--<input autocomplete="off" type="text" clas s="form-control" id="calltimeri" name="calltimeri" placeholder="Company">-->
+                                                                </div>
+                                                                <!--<span class="wpcf7-form-control-wrap email">
+                                                                <select class="wpcf7-form-control">
+                                                                    <option value="select contact reason">What is your enquiry regarding?</option>
+                                                                    <option value="General enquiry">General enquiry</option>
+                                                                    <option value="Plumbing">Plumbing</option>
+                                                                    <option value="Heating">Heating</option>
+                                                                    <option value="Electrical">Electrical</option>
+                                                                    <option value="Building">Building</option>
+                                                                    <option value="Repairs">Repairs</option>
+                                                                    <option value="Installations">Installation</option>
+                                                                    <option value="Area coverage">Area Coverage</option>
+                                                                    <option value="Pricing details">Pricing Details</option>  
+                                                                </select>
+                                                            </span>-->
+
 
 
 
                                                                 <span class="wpcf7-form-control-wrap message">
-                                                                <label for="message">Your message</label>
+                                                                <label for="message">Please leave your message and we will get back to you within the next 24 hours.</label>
                                                                 <textarea name="message" id="message" tabindex="5" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" placeholder="Message *" required></textarea>
                                                             </span>
 
@@ -314,6 +347,27 @@
                                                                 <input type="hidden" name="_next" value="//site.io/thanks.html" />
                                                             </div>
                                                         </form>
+
+                                                        <!--success modal -->
+
+                                                        <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModal">
+                                                            <div class="modal-dialog" role="dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                                        <h4 class="modal-title" id="myModalLabel">Enquiry successfully recieved </h4>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <p>Thank you for your enquiry. You will recieve an response within the next 24 hours.</p>
+                                                                    </div>
+                                                                    <!-- <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                                                    </div> -->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
                                                     </div>
                                                 </div>
                                                 <!-- /.wprt-content-box -->
