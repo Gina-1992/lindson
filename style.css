@@ -712,6 +712,28 @@ select::after {
 }
 
 
+/* Modal */
+
+.modal {
+	top:150px;
+}
+
+.modal#serviceQuote {
+	top:100px;
+}
+
+.modal#serviceQuote .wpcf7-form-control {
+	background-color: #f1f1f1;
+}
+
+.modal#serviceQuote .wpcf7-textarea {
+	background-color: #f1f1f1;
+}
+
+
+
+
+
 /* Input focus */
 
 textarea:focus,
@@ -746,7 +768,7 @@ input[type="submit"] {
     font-family: "Montserrat", sans-serif;
     padding: 18px 25px;
     border-radius: 3px;
-    background-color: #f77015;
+    background-color: #f77015 !important;
     color: #fff;
     font-weight: 600;
     display: inline-block;
@@ -2044,7 +2066,7 @@ body.menu-has-search #site-header #header-search {
 
 #site-header #main-nav ul ul li a {
     display: block;
-    background-color: #333;
+    background-color: #272e34;
     color: #e4e4e4;
     font-weight: 400;
     font-family: "Montserrat", sans-serif;
@@ -3391,6 +3413,15 @@ body.header-style-2 #site-header.is-fixed:after {
     }
 }
 
+
+@media only screen and (max-width: 1239px) {
+	
+#site-header .mobile-button {
+        display: block;
+    }
+	
+}
+
 @media only screen and (max-width: 959px) {
     /* Font Size */
     .font-size-22 {
@@ -3439,9 +3470,7 @@ body.header-style-2 #site-header.is-fixed:after {
         display: none;
     }
     /* Header */
-    #site-header .mobile-button {
-        display: block;
-    }
+    
     #main-nav,
     #site-header #header-search,
     .nav-top-cart-wrapper,

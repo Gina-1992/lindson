@@ -1,6 +1,6 @@
-;
+
 (function($) {
-    'use strict'
+    'use strict';
 
     /**
      * searchIcon
@@ -45,7 +45,7 @@
             var mode = 'desktop';
             var $wrapMenu = $('#site-header-inner .wrap-inner');
 
-            if (matchMedia('only screen and (max-width: 959px)').matches)
+            if (matchMedia('only screen and (max-width: 1240px)').matches)
                 mode = 'mobile';
 
             if (mode != menuType) {
@@ -162,13 +162,14 @@
     var $contactForm = $('form');
     $contactForm.submit(function(e) {
         e.preventDefault();
-        if ($(contactForm).valid()) {
+        if ($("form").valid()) {
             $.ajax({
                 url: 'https://formspree.io/lindsonbuildingservices@gmail.com',
                 method: 'POST',
                 data: $(this).serialize(),
                 dataType: 'json',
                 success: function(data) {
+					
                     $('#successModal').modal('show');
                     setTimeout(function() {
                         $('#successModal').modal('hide');
