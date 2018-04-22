@@ -130,7 +130,8 @@
 
     /////Validation
 
-    $("form").validate({
+    $('form').each(function() { 
+    $(this).validate({
         rules: {
             name: "required",
             phone: {
@@ -157,6 +158,8 @@
         }
     });
 
+});
+
     //formspree
 
     var $contactForm = $('form');
@@ -182,6 +185,8 @@
             });
         }
     });
+
+    
 
 
 

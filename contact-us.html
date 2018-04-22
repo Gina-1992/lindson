@@ -90,7 +90,7 @@
                         <div class="wrap-inner">
                             <div id="site-logo" class="clearfix">
                                 <div id="site-logo-inner">
-                                    <a href="home.html" title="Lindson Building Services" rel="home" class="main-logo">
+                                    <a href="http://lindsonbuildingservices.co.uk/" title="Lindson Building Services" rel="home" class="main-logo">
                                         <img src="assets/img/lbs-logo-v2.png" alt="Lindson Building Services" data-retina="assets/img/lbs-logo-v2.png" data-width="237" data-height="60">
                                     </a>
                                 </div>
@@ -98,27 +98,30 @@
                             <!-- /#site-logo -->
 
                             <div class="mobile-button"><span></span></div>
+                            <button class="wprt-button hidden-lg hidden-md mobile-button-contact" data-toggle="modal" data-target="#serviceQuote"><i class="fa fa-phone"></i></button>
+                            
                             <!-- /.mobile menu button -->
 
                             <nav id="main-nav" class="main-nav">
                                 <ul class="menu">
-                                    <li class="current-menu-item"><a href="home.html">home</a></li>
-                                    <li><a href="page-about.html">About Us</a></li>
+                                    <li class="current-menu-item"><a href="http://lindsonbuildingservices.co.uk/">home</a></li>
+                                    <li><a href="http://lindsonbuildingservices.co.uk/">About Us</a></li>
                                     <!--<li><a href="page-services.html">Services 1</a></li> -->
-                                    <li><a href="page-services.html">Plumbing</a></li>
-                                    <li><a href="page-services.html">Heating</a></li>
-                                    <li><a href="page-services.html">Building</a></li>
-                                    <li><a href="page-services.html">Electrical</a></li>
-                                    <li class="menu-item-has-children"><a href="page-services-detail.html">Services</a>
+                                    <li><a href="http://lindsonbuildingservices.co.uk/plumbing">Plumbing</a></li>
+                                    <li><a href="http://lindsonbuildingservices.co.uk/heating">Heating</a></li>
+                                    <li><a href="http://lindsonbuildingservices.co.uk/building">Building</a></li>
+                                    <li><a href="http://lindsonbuildingservices.co.uk/electrical">Electrical</a></li>
+                                    <li class="menu-item-has-children"><a href="#">Services</a>
                                         <ul class="sub-menu">
-                                            <li><a href="page-services.html">Repairs</a></li>
-                                            <li><a href="page-services-2.html">Installation & Fittings</a></li>
-                                            <li><a href="page-services-detail.html">Inspection & Maintanence</a></li>
+                                            <li><a href="http://lindsonbuildingservices.co.uk/repairs">Repairs</a></li>
+                                            <li><a href="http://lindsonbuildingservices.co.uk/installation">Installation & Fittings</a></li>
+                                            <li><a href="http://lindsonbuildingservices.co.uk/inspection">Inspection & Maintanence</a></li>
                                         </ul>
                                     </li>
                                     <!--<li><a href="page-services-detail.html">Installation & fittings </a></li>
                         <li><a href="page-services-detail.html">Inspection & Maintanence </a></li> -->
-                                    <li><a href="page-contact.html">Contact</a></li>
+                                    <li><a href="http://lindsonbuildingservices.co.uk/contact">Contact</a></li>
+                                   <!-- <li><a href="page-contact.html" class="hidden-lg" style="background-color:#f77015; width: 100%;" data-toggle="modal" data-target="#serviceQuote">Request a quote</a></li> -->
                                 </ul>
 								
                             </nav>
@@ -133,7 +136,7 @@
             <!-- /#site-header-wrap -->
 
             <!-- Featured Title -->
-            <div id="featured-title" class="text-center">
+            <div id="featured-title" class="text-center contact">
                 <div id="featured-title-inner" class="wprt-container">
                     <div class="featured-title-inner-wrap">
                         <div class="featured-title-heading-wrap">
@@ -506,11 +509,13 @@
 						<div class="modal-dialog" role="dialog">
 							<div class="modal-content">
 								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle"></i></button>
 									<h4 class="modal-title" id="Quote">Request a quote</h4>
 								</div>
 								<div class="modal-body">
-									<p>If you would like a quote on a specific service, call out, or just would like to know in more detail pricing, please fill out this form and we will be in touch shortly with more details.</p>
+                                    <p>If you would like a quote on a specific service, call out, or just would like to know in more detail pricing, please fill out this form and we will be in touch shortly with more details.</p>
+                                    
+                                    <p>alternatively, please call us on <a href="tel:+447990974987">+447990974987</a> or email us at <a href="mailto:lindsonbuildingservices@gmail.com">lindsonbuildingservices@gmail.com</a>.</p>
 									
 									<form action="https://formspree.io/lindsonbuildingservices@gmail.com" method="post" class="contact-form wpcf7-form" id="quoteform">
 										<div class="wprt-contact-form-2">
@@ -551,12 +556,14 @@
 											<textarea name="message" id="message-quote" tabindex="5" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" placeholder="Message *" required></textarea>
 										</span>
 											<input type="hidden" name="_next" value="//site.io/thanks.html" />
-										</div>
+                                        </div>
+                                        
+                                        <div class="modal-footer">
+                                            <input type="submit" value="SUBMIT FORM" class="submit wpcf7-form-control wpcf7-submit" id="submitquote-2" name="submit">
+                                        </div> 
 									</form>
 								</div>
-								<div class="modal-footer">
-									<input type="submit" value="SUBMIT FORM" class="submit wpcf7-form-control wpcf7-submit" id="submitquote-2" name="submit">
-								</div> 
+								
 							</div>
 						</div>
 					</div>
