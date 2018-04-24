@@ -2450,11 +2450,49 @@ body.header-style-2 #site-header.is-fixed:after {
 
 #featured-title {
     background-color: #f9f9f9;
+    background-repeat: no-repeat !important;
+    background-size: cover  !important;
+    max-width: 100%;
+    background-position: center  !important;
 }
 
 #featured-title.contact {
-    background:url(/assets/img/about/contact-us-banner.png)
+    background:url(assets/img/about/contact-us-banner.png)
 }
+
+#featured-title.about {
+    background:url(assets/img/about/about-us-banner.png)
+}
+
+#featured-title.plumbing {
+    background:url(assets/img/about/plumbing-banner.png)
+}
+
+#featured-title.building {
+    background:url(assets/img/about/building-banner.png)
+}
+
+#featured-title.electrical {
+    background:url(assets/img/about/electrical-banner.png)
+}
+
+#featured-title.heating {
+    background:url(assets/img/about/heating-banner.png)
+}
+
+#featured-title.repairs {
+    background:url(assets/img/about/repairs-banner.png)
+}
+
+#featured-title.installation {
+    background:url(assets/img/about/installation-banner.png)
+}
+
+
+#featured-title.inspection {
+    background:url(assets/img/about/inspection-banner.png)
+}
+
 
 #featured-title .featured-title-heading {
     margin: 0;
