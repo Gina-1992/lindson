@@ -730,6 +730,15 @@ select::after {
 	background-color: #f1f1f1;
 }
 
+.modal-header .close {
+    margin-top: -2px;
+    opacity: 1;
+    background-color: transparent !important;
+    color: #F77022 !important;
+    background: transparent;
+    overflow: hidden;
+}
+
 
 
 

@@ -160,31 +160,60 @@
 
 });
 
-    //formspree
+ //Enformed code to send message through
 
-    var $contactForm = $('form');
-    $contactForm.submit(function(e) {
-        e.preventDefault();
-        if ($("form").valid()) {
-            $.ajax({
-                url: 'https://formspree.io/lindsonbuildingservices@gmail.com',
-                method: 'POST',
-                data: $(this).serialize(),
-                dataType: 'json',
-                success: function(data) {
-					
-                    $('#successModal').modal('show');
-                    setTimeout(function() {
-                        $('#successModal').modal('hide');
-                    }, 3000);
-                },
-                error: function(err) {
-                    $contactForm.find('.alert--loading').hide();
-                    $contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
-                }
-            });
-        }
-    });
+ var $contactForm = $('#quoteform');
+ $contactForm.submit(function(e) {
+     e.preventDefault();
+     if ($("#quoteform").valid()) {
+         $.ajax({
+             url: 'https://www.enformed.io/cbygsbg5',
+             method: 'POST',
+             data: $(this).serialize(),
+             dataType: 'json',
+             success: function(data) {
+                 $('#serviceQuote').modal('hide');
+                 $('#successModal').modal('show');
+                 setTimeout(function() {
+                     $('#successModal').modal('hide');
+                 }, 5000);
+             },
+             error: function(err) {
+                 $('#serviceQuote').modal('hide');
+                 $('#successModal').modal('show');
+                 setTimeout(function() {
+                     $('#successModal').modal('hide');
+                 }, 3000);
+             }
+         });
+     }
+ });
+
+ var $contactForm = $('#contactform');
+ $contactForm.submit(function(e) {
+     e.preventDefault();
+     if ($("#contactform").valid()) {
+         $.ajax({
+             url: 'https://www.enformed.io/cbygsbg5',
+             method: 'POST',
+             data: $(this).serialize(),
+             dataType: 'json',
+             success: function(data) {
+                 
+                 $('#successModal').modal('show');
+                 setTimeout(function() {
+                     $('#successModal').modal('hide');
+                 }, 3000);
+             },
+             error: function(err) {
+                 $('#successModal').modal('show');
+                 setTimeout(function() {
+                     $('#successModal').modal('hide');
+                 }, 3000);
+             }
+         });
+     }
+ });
 
     
 
