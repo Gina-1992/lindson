@@ -2470,36 +2470,37 @@ body.header-style-2 #site-header.is-fixed:after {
 }
 
 #featured-title.about {
-    background:url(assets/img/about/about-us-banner.png)
+    background:url(assets/img/about/about-us-banner.jpg);
+    background-position: 0px -170px !important;
 }
 
 #featured-title.plumbing {
-    background:url(assets/img/about/plumbing-banner.png)
+    background:url(assets/img/about/plumbing-banner.jpg)
 }
 
 #featured-title.building {
-    background:url(assets/img/about/building-banner.png)
+    background:url(assets/img/about/building-banner.jpg)
 }
 
 #featured-title.electrical {
-    background:url(assets/img/about/electrical-banner.png)
+    background:url(assets/img/about/electrical-banner.jpg)
 }
 
 #featured-title.heating {
-    background:url(assets/img/about/heating-banner.png)
+    background:url(assets/img/about/heating-banner.jpg)
 }
 
 #featured-title.repairs {
-    background:url(assets/img/about/repairs-banner.png)
+    background:url(assets/img/about/repairs-banner.jpg)
 }
 
 #featured-title.installation {
-    background:url(assets/img/about/installation-banner.png)
+    background:url(assets/img/about/installation-banner.jpg)
 }
 
 
 #featured-title.inspection {
-    background:url(assets/img/about/inspection-banner.png)
+    background:url(assets/img/about/inspection-banner.jpg)
 }
 
 
