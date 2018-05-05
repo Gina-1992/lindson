@@ -284,6 +284,7 @@
 /* Toggle
 -------------------------------------------------------------- */
 .wprt-toggles .toggle-item { margin-bottom: 10px; }
+.wprt-toggles.product .toggle-item .toggle-heading {cursor: context-menu;}
 .wprt-toggles .toggle-item .toggle-heading { font-size: 16px; padding: 17px 20px; margin-bottom: 0; background-color: #f8f8f8; cursor: pointer; position: relative; border-radius: 3px; -webkit-transition: all .238s; transition: all .238s; }
 .wprt-toggles .toggle-item .toggle-heading:hover { color: #f77015; }
 .wprt-toggles .toggle-item .toggle-heading > .inner { padding: 0 45px; display: block; position: relative; }
@@ -654,6 +655,7 @@
 .wprt-content-box.padding-left-15 { padding-left: 15px; }
 .wprt-content-box.padding-left-16 { padding-left: 16px; }
 .wprt-content-box.padding-left-100 { padding-left: 100px; }
+.wprt-content-box.padding-round { padding:0px 30px; }
  
 .wprt-content-box.max-width-570 { max-width: 570px; }
 

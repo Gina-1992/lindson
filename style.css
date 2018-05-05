@@ -719,7 +719,7 @@ select::after {
 }
 
 .modal#serviceQuote {
-	top:100px;
+	top:50px;
 }
 
 .modal#serviceQuote .wpcf7-form-control {
@@ -942,7 +942,7 @@ h6 a:hover {
 #tp-bg { 
     background: #000;
     width: 100%;
-    height: 323px;
+    height: 370px;
     opacity: 0.6;
     top: 227px;
     position: relative;
@@ -2460,9 +2460,15 @@ body.header-style-2 #site-header.is-fixed:after {
 #featured-title {
     background-color: #f9f9f9;
     background-repeat: no-repeat !important;
-    background-size: cover  !important;
+    background-size: none;
     max-width: 100%;
     background-position: center  !important;
+}
+
+@media only screen and (min-width: 992px) {
+    #featured-title {
+        background-size: cover  !important;
+    }
 }
 
 #featured-title.contact {
@@ -3264,7 +3270,7 @@ body.header-style-2 #site-header.is-fixed:after {
 
 #footer {
     background-color: #20252a;
-    padding: 96px 0;
+    padding: 55px 0;
 }
 
 #footer-widgets .widget .widget-title {
